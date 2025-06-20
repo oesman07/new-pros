@@ -139,21 +139,18 @@ p {
 }
 
 
-  .btn-discover {
-      position: fixed;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #ff3333;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 999px;
-      font-size: 16px;
-      z-index: 9999;
-      text-align: center;
-      text-decoration: none;
-      font-weight: bold;
-    }
+ .btn-discover {
+    display: inline-block;
+    background-color: #ffc107; /* Yellow */
+    color: var(--text-color);
+    padding: 15px 35px;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
 
 .btn-discover:hover {
