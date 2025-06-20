@@ -1,0 +1,567 @@
+/* General Styles */
+:root {
+    --primary-color: #28a745; /* Green */
+    --secondary-color: #007bff; /* Blue */
+    --text-color: #333;
+    --light-grey: #f8f9fa;
+    --dark-grey: #6c757d;
+    --white: #fff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-grey);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-top: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header / Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('URL_GAMBAR_BACKGROUND_HERO_OPSIONAL') no-repeat center center/cover;
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: var(--white);
+}
+
+.hero-content .sub-headline {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-content .btn {
+    margin-top: 20px;
+    font-size: 1.2em;
+    padding: 15px 40px;
+}
+
+.hero-content .small-text {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-image {
+    margin-top: 30px;
+    /* Jika Anda ingin gambar terpisah dari background */
+    max-width: 500px; /* Sesuaikan ukuran gambar */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Section: Kenapa Prostanore? */
+.why-prostanore-section {
+    padding: 60px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.why-prostanore-section .problem-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.why-prostanore-section .problem-item {
+    background-color: var(--light-grey);
+    padding: 25px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.why-prostanore-section .problem-item i {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.why-prostanore-section .problem-item p {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.why-prostanore-section .call-to-action-text {
+    margin-top: 40px;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.why-prostanore-section .solution-intro {
+    margin-top: 20px;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section: Manfaat Utama Prostanore */
+.benefits-section {
+    padding: 60px 0;
+    background-color: #e9ecef; /* Slightly darker light grey */
+    text-align: center;
+}
+
+.benefits-section .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefits-section .benefit-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.benefits-section .benefit-item i {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.benefits-section .benefit-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.benefits-section .benefit-item p {
+    font-size: 1em;
+    color: var(--dark-grey);
+}
+
+.benefits-section .bpom-logo-small {
+    max-width: 100px; /* Adjust size as needed */
+    margin: 0 auto 15px auto;
+}
+
+/* Section: Bagaimana Prostanore Bekerja */
+.how-it-works-section {
+    padding: 60px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.how-it-works-section p {
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Section: Testimoni Pelanggan */
+.testimonials-section {
+    padding: 60px 0;
+    background-color: var(--light-grey);
+}
+
+.testimonials-section .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonials-section .testimonial-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    position: relative;
+}
+
+.testimonials-section .testimonial-item img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: -70px auto 20px auto; /* Pull image up */
+    border: 5px solid var(--primary-color);
+    display: block;
+}
+
+.testimonials-section .testimonial-item p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-size: 1.1em;
+}
+
+.testimonials-section .testimonial-item span {
+    font-weight: 600;
+    color: var(--primary-color);
+    display: block;
+}
+
+/* Section: Penawaran Spesial & Pilihan Paket */
+.packages-section {
+    padding: 60px 0;
+    background-color: var(--secondary-color); /* Blue background */
+    color: var(--white);
+    text-align: center;
+}
+
+.packages-section h2 {
+    color: var(--white);
+}
+
+.packages-section .stok-terbatas {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffc107; /* Yellow for emphasis */
+}
+
+.packages-section .package-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.packages-section .package-item {
+    background-color: var(--white);
+    color: var(--text-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.packages-section .package-item.featured {
+    border: 4px solid var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.packages-section .package-item h3 {
+    color: var(--secondary-color);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.packages-section .package-item .price {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.packages-section .package-item ul {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+    width: 100%;
+}
+
+.packages-section .package-item ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: var(--dark-grey);
+}
+
+.packages-section .package-item .btn {
+    width: 90%;
+    margin-top: auto; /* Push button to bottom */
+}
+
+/* Section: Jaminan & Keamanan */
+.guarantee-section {
+    padding: 60px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.guarantee-section .guarantee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.guarantee-section .guarantee-item {
+    background-color: var(--light-grey);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.guarantee-section .guarantee-item i {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.guarantee-section .guarantee-item img {
+    max-width: 120px; /* Adjust size for logos */
+    margin: 0 auto 15px auto;
+}
+
+.guarantee-section .guarantee-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.guarantee-section .guarantee-item p {
+    font-size: 0.95em;
+    color: var(--dark-grey);
+}
+
+/* Section: FAQ */
+.faq-section {
+    padding: 60px 0;
+    background-color: #e9ecef;
+}
+
+.faq-section .faq-item {
+    background-color: var(--white);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.faq-section .faq-question {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.faq-section .faq-question:hover {
+    background-color: var(--light-grey);
+}
+
+.faq-section .faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-section .faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-section .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 20px; /* Padding for when it expands */
+}
+
+.faq-section .faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust as needed for content */
+    padding: 20px;
+}
+
+.faq-section .faq-answer p {
+    padding-bottom: 10px;
+    color: var(--dark-grey);
+    font-size: 1em;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Dark grey/black */
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+footer .footer-logo img {
+    max-width: 150px;
+    filter: brightness(0) invert(1); /* Make logo white if it's dark */
+    margin-bottom: 15px;
+}
+
+footer .footer-links p {
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+footer .footer-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: var(--white);
+}
+
+footer .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .hero-section .hero-content {
+        padding: 0 15px;
+    }
+    .hero-section .hero-content .sub-headline {
+        font-size: 1.1em;
+    }
+    .hero-section .container {
+        flex-direction: column;
+    }
+    .problem-list, .benefits-grid, .testimonial-grid, .package-grid, .guarantee-grid {
+        grid-template-columns: 1fr;
+    }
+    .packages-section .package-item.featured {
+        transform: scale(1); /* Remove scale on mobile */
+    }
+    .testimonial-section .testimonial-item img {
+        margin-top: 0; /* Adjust image position for smaller screens */
+    }
+    footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
