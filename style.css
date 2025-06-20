@@ -138,7 +138,10 @@ p {
     color: rgba(255, 255, 255, 0.9);
 }
 
+
 .btn-discover {
+    z-index: 9999;
+    position: fixed;
     display: inline-block;
     background-color: #ffc107; /* Yellow */
     color: var(--text-color);
