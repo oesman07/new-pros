@@ -139,7 +139,7 @@ p {
 }
 
 
- .btn-discover {
+  .btn-discover {
       position: fixed;
       bottom: 15px;
       left: 50%;
@@ -154,6 +154,7 @@ p {
       text-decoration: none;
       font-weight: bold;
     }
+
 
 .btn-discover:hover {
     background-color: #e0a800;
