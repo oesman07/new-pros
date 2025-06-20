@@ -42,7 +42,7 @@
         <section class="call-to-action">
             <h3>Jangan Biarkan Masalah Ini Berlarut!</h3>
             <p>Ratusan pria telah merasakan sendiri perbedaannya. Sekarang giliran Anda!</p>
-            <a href="URL_LANDING_PAGE_PROSTANORE_ANDA" class="btn-discover">Temukan Rahasia Solusi Lengkapnya di Sini!</a>
+            <a id="ctaBtn" href="https://uh81cfea97uh.axdsz.pro/?target=-7EBNQCgQAAAcbNgMD25UABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&al=104071" class="btn-discover">Temukan Rahasia Solusi Lengkapnya di Sini!</a>
             <p class="disclaimer">Klik tombol di atas untuk informasi lebih lanjut.</p>
         </section>
     </div>
@@ -52,4 +52,35 @@
     </footer>
 
 </body>
+    <script>
+    function getUrlParam(name) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    }
+
+    function replaceUrlParam(url, paramName, paramValue) {
+      var pattern = new RegExp('('+paramName+'=).*?(&|$)'),
+          newUrl = url.replace(pattern,'$1' + paramValue + '$2');
+      if ( newUrl == url ) {
+        newUrl = newUrl + (newUrl.indexOf('?')>0 ? '&' : '?') + paramName + '=' + paramValue;
+      }
+      return newUrl;
+    }
+
+    const subacc = getUrlParam('subacc');
+    const button = document.getElementById('ctaBtn');
+    const targetUrl = "https://uh81cfea97uh.axdsz.pro/?target=-7EBNQCgQAAAcbNgMD25UABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&al=104071"; 
+
+    if (subacc) {
+      button.href = replaceUrlParam(targetUrl, 'subacc', subacc);
+    } else {
+      button.href = targetUrl;
+    }
+
+    document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+
+  </script>
 </html>
